@@ -55,7 +55,7 @@ function DetailRow({ label, value, valueStyle, colors }) {
 // totalSettlementAmount, interestSaved, accountBalance).
 
 function FullRepaymentQuote({ query, quote, insufficientBalance, colors, t }) {
-  if (query.isLoading) {
+  if (query.isFetching) {
     return (
       <View className="mb-6 flex-row items-center justify-center py-6" style={{ gap: 10 }}>
         <ActivityIndicator color={colors.primary} />
@@ -189,7 +189,9 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
     gcTime: 0,
     retry: false,
   });
-  const quote = quoteQuery.data;
+  // While a fresh quote is loading, show none: the modal stays mounted, so the
+  // previous quote is still cached and could otherwise be shown (and paid).
+  const quote = quoteQuery.isFetching ? undefined : quoteQuery.data;
   const fullTotal = quote?.totalSettlementAmount;
   const insufficientBalance = quote?.sufficientBalance === false;
 
@@ -217,6 +219,8 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
   };
 
   const handleConfirmRepayment = async () => {
+    if (isFull && (fullTotal == null || insufficientBalance)) return;
+
     if (repaymentOption === 'Partial' && (!amount || Number(stripCommas(amount)) <= 0)) {
       setAmountError(t('components.repayment.invalidAmountMessage'));
       Toast.show({
