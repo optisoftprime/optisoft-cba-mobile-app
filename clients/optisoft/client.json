@@ -1,0 +1,46 @@
+{
+  "appName": "CBA-Mobile",
+  "slug": "cba-mobile",
+  "scheme": "cbamobile",
+  "version": "1.0.0",
+  "orgKey": "ORG-1728290007232",
+  "poweredBy": "Optisoft Technology Limited",
+  "expo": {
+    "owner": "optisoft_tech",
+    "projectId": "e419ff57-7ec6-41a6-be92-445f96fdb27b"
+  },
+  "android": {
+    "package": "com.optisoft.cbamobile",
+    "versionCode": 1
+  },
+  "ios": {
+    "bundleIdentifier": "com.optisoft.cbamobile"
+  },
+  "icon": {
+    "background": "#FFFFFF"
+  },
+  "splash": {
+    "background": "#ffffff",
+    "darkBackground": "#151B23"
+  },
+  "colors": {
+    "light": {
+      "primary": "#208AEF",
+      "primaryDark": "#1B6FC4",
+      "primaryLight": "#DCEBFB",
+      "onPrimary": "#FFFFFF",
+      "panelFrom": "#2A8CF0",
+      "panelTo": "#0B4F9E",
+      "onPanel": "#FFFFFF"
+    },
+    "dark": {
+      "primary": "#4FA3F5",
+      "primaryDark": "#3B8AD9",
+      "primaryLight": "#16324D",
+      "onPrimary": "#06131F",
+      "panelFrom": "#1C5FA8",
+      "panelTo": "#0A3562",
+      "onPanel": "#F9FAFB"
+    }
+  }
+}

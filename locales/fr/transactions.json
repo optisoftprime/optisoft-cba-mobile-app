@@ -1,0 +1,21 @@
+{
+  "title": "Historique des transactions",
+  "today": "Aujourd'hui",
+  "yesterday": "Hier",
+  "transaction": "Transaction",
+  "noTransactions": "Aucune transaction trouvée",
+  "adjustDateRange": "Essayez d'ajuster la plage de dates",
+  "startDate": "Date de début",
+  "endDate": "Date de fin",
+  "filter": "Filtrer",
+  "statement": "Relevé",
+  "sending": "Envoi...",
+  "invalidRange": "Plage invalide",
+  "invalidRangeSub": "La date de début doit précéder la date de fin",
+  "statementSent": "Relevé envoyé",
+  "statementSentSub": "Votre relevé a été envoyé à votre adresse e-mail.",
+  "failed": "Échec",
+  "statementFailed": "Impossible d'envoyer le relevé. Veuillez réessayer.",
+  "error": "Erreur",
+  "somethingWrong": "Une erreur s'est produite. Veuillez réessayer."
+}

@@ -1,0 +1,75 @@
+{
+  "continue": "Continuer",
+  "loading": "Chargement...",
+  "searchPlaceholder": "Rechercher...",
+  "noResults": "Aucun résultat",
+  "nothingHere": "Rien ici pour le moment",
+  "aboutProduct": "À propos de ce produit",
+  "wallet": {
+    "withdraw": "Retirer",
+    "accountNumber": "Numéro de compte",
+    "availableBalance": "Solde disponible du portefeuille",
+    "copied": "Copié !",
+    "copiedMessage": "Numéro de compte copié dans le presse-papiers",
+    "upgradePending": "Mise à niveau en attente"
+  },
+  "pinModal": {
+    "title": "Autoriser le paiement",
+    "prompt": "Saisissez votre code PIN de transaction à 4 chiffres pour confirmer",
+    "processing": "Traitement de votre paiement..."
+  },
+  "result": {
+    "successTitle": "Achat réussi",
+    "failureTitle": "Échec de l'achat",
+    "done": "Terminé",
+    "tryAgain": "Réessayer",
+    "cancel": "Annuler"
+  },
+  "details": {
+    "done": "Terminé",
+    "shareReceipt": "Partager le reçu",
+    "generating": "Génération...",
+    "secure": "Sécurisé et protégé",
+    "secureSubtitle": "Votre transaction est sécurisée et protégée",
+    "recipient": "Bénéficiaire",
+    "sender": "Expéditeur",
+    "narration": "Motif",
+    "referenceId": "ID de référence",
+    "fee": "Frais",
+    "copied": "Copié !",
+    "copiedMessage": "{{label}} copié",
+    "receiptReady": "Reçu prêt",
+    "error": "Erreur",
+    "receiptError": "Impossible de générer le reçu. Veuillez réessayer."
+  },
+  "confirm": {
+    "title": "Êtes-vous sûr ?",
+    "subtitle": "Cette action est irréversible.",
+    "confirmLabel": "Oui, continuer",
+    "cancelLabel": "Annuler",
+    "processing": "Traitement..."
+  },
+  "repayment": {
+    "title": "Rembourser le prêt",
+    "option": "Option de remboursement",
+    "full": "Total",
+    "partial": "Partiel",
+    "confirm": "Confirmer le remboursement",
+    "processing": "Traitement de votre remboursement...",
+    "amount": "Montant",
+    "loanLabel": "Prêt {{code}}",
+    "totalRepayment": "Remboursement total : {{amount}}",
+    "successTitle": "Remboursement réussi",
+    "failureTitle": "Échec du remboursement",
+    "successMessage": "Remboursement effectué avec succès.",
+    "failureMessage": "Échec du remboursement. Veuillez réessayer.",
+    "invalidAmount": "Montant invalide",
+    "invalidAmountMessage": "Saisissez un montant supérieur à 0 ₦.",
+    "loanId": "ID du prêt",
+    "optionLabel": "Option",
+    "reference": "Référence",
+    "done": "Terminé",
+    "tryAgain": "Réessayer",
+    "cancel": "Annuler"
+  }
+}

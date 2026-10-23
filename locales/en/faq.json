@@ -1,0 +1,13 @@
+{
+  "title": "Frequently Asked Questions",
+  "searchPlaceholder": "Search questions...",
+  "browseTopics": "Browse topics",
+  "filterLabel": "Filter by Category",
+  "allCategories": "All Categories",
+  "loadingTitle": "Loading FAQs...",
+  "loadingSubtitle": "Please wait a moment",
+  "emptyTitle": "No FAQs found",
+  "noResults": "No results for \"{{query}}\".",
+  "noInCategory": "No FAQs in \"{{category}}\".",
+  "emptyDefault": "There are no FAQs available yet."
+}

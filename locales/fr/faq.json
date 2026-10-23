@@ -1,0 +1,13 @@
+{
+  "title": "Foire aux questions",
+  "searchPlaceholder": "Rechercher des questions...",
+  "browseTopics": "Parcourir les sujets",
+  "filterLabel": "Filtrer par catégorie",
+  "allCategories": "Toutes les catégories",
+  "loadingTitle": "Chargement des FAQ...",
+  "loadingSubtitle": "Veuillez patienter un instant",
+  "emptyTitle": "Aucune FAQ trouvée",
+  "noResults": "Aucun résultat pour « {{query}} ».",
+  "noInCategory": "Aucune FAQ dans « {{category}} ».",
+  "emptyDefault": "Aucune FAQ n'est disponible pour le moment."
+}

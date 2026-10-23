@@ -1,0 +1,16 @@
+{
+  "login": "Connexion",
+  "register": "S'inscrire",
+  "openAccount": "Ouvrir un compte",
+  "getHelp": "Obtenir de l'aide",
+  "next": "Suivant",
+  "getStarted": "Commencer",
+  "yes": "Oui",
+  "no": "Non",
+  "back": "Retour",
+  "notifications": "Notifications",
+  "notificationsUnread": "Notifications, {{count}} non lues",
+  "help": "Aide",
+  "comingSoonTitle": "Bientôt disponible",
+  "comingSoonMessage": "Cette fonctionnalité n'est pas encore disponible. Nous vous préviendrons dès qu'elle le sera."
+}

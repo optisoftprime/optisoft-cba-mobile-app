@@ -1,0 +1,27 @@
+Async values to know
+appState ==  this is used to manage where the app currenltly is incase the user coses it and needs to continue from where they left off
+app == stores data like has the user opened the app before 
+all the amount inputs mush have 2dp ALL OF THEM THIS IS ALSO URGENT
+REDO THE FILES ALREADY DONE FOR MORE EFFICENCY like too much data in one file 
+all the inputs for amounts must have decimal accceptance 
+the loans fetched whe booking should be filtered to only the approved loans 
+
+
+// All
+// Processing,
+//     Approved,
+//     Declined,
+//     Paid,
+//     Performing,
+//     Not_Performing,
+//     Completed,
+//     Running,
+//     Over_Due
+// this is the actual enum Values for the loan filtering 
+
+
+STORED QUERY KEYS
+"dashboard"
+"loanProducts"
+"myLoans"
+"savingProducts"

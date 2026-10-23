@@ -1,0 +1,16 @@
+{
+  "login": "Login",
+  "register": "Register",
+  "openAccount": "Open Account",
+  "getHelp": "Get Help",
+  "next": "Next",
+  "getStarted": "Get Started",
+  "yes": "Yes",
+  "no": "No",
+  "back": "Back",
+  "notifications": "Notifications",
+  "notificationsUnread": "Notifications, {{count}} unread",
+  "help": "Help",
+  "comingSoonTitle": "Coming soon",
+  "comingSoonMessage": "This feature isn't available yet. We'll let you know as soon as it is."
+}

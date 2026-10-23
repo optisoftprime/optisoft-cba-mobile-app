@@ -1,0 +1,75 @@
+{
+  "continue": "Continue",
+  "loading": "Loading...",
+  "searchPlaceholder": "Search...",
+  "noResults": "No results found",
+  "nothingHere": "Nothing here yet",
+  "aboutProduct": "About this product",
+  "wallet": {
+    "withdraw": "Withdraw",
+    "accountNumber": "Account Number",
+    "availableBalance": "Available Wallet Balance",
+    "copied": "Copied!",
+    "copiedMessage": "Account number copied to clipboard",
+    "upgradePending": "Upgrade Pending"
+  },
+  "pinModal": {
+    "title": "Authorize Payment",
+    "prompt": "Enter your 4-digit transaction PIN to confirm",
+    "processing": "Processing your payment..."
+  },
+  "result": {
+    "successTitle": "Purchase Successful",
+    "failureTitle": "Purchase Failed",
+    "done": "Done",
+    "tryAgain": "Try Again",
+    "cancel": "Cancel"
+  },
+  "details": {
+    "done": "Done",
+    "shareReceipt": "Share Receipt",
+    "generating": "Generating...",
+    "secure": "Secure & Protected",
+    "secureSubtitle": "Your transaction is secure and protected",
+    "recipient": "Recipient",
+    "sender": "Sender",
+    "narration": "Narration",
+    "referenceId": "Reference ID",
+    "fee": "Fee",
+    "copied": "Copied!",
+    "copiedMessage": "{{label}} copied",
+    "receiptReady": "Receipt Ready",
+    "error": "Error",
+    "receiptError": "Could not generate receipt. Please try again."
+  },
+  "confirm": {
+    "title": "Are you sure?",
+    "subtitle": "This action cannot be undone.",
+    "confirmLabel": "Yes, Proceed",
+    "cancelLabel": "Cancel",
+    "processing": "Processing..."
+  },
+  "repayment": {
+    "title": "Repay Loan",
+    "option": "Repayment Option",
+    "full": "Full",
+    "partial": "Partial",
+    "confirm": "Confirm Repayment",
+    "processing": "Processing your repayment...",
+    "amount": "Amount",
+    "loanLabel": "Loan {{code}}",
+    "totalRepayment": "Total Repayment: {{amount}}",
+    "successTitle": "Repayment Successful",
+    "failureTitle": "Repayment Failed",
+    "successMessage": "Repayment completed successfully.",
+    "failureMessage": "Repayment failed. Please try again.",
+    "invalidAmount": "Invalid amount",
+    "invalidAmountMessage": "Enter an amount greater than ₦0.",
+    "loanId": "Loan ID",
+    "optionLabel": "Option",
+    "reference": "Reference",
+    "done": "Done",
+    "tryAgain": "Try Again",
+    "cancel": "Cancel"
+  }
+}

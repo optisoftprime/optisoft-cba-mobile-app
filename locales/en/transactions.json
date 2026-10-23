@@ -1,0 +1,21 @@
+{
+  "title": "Transaction History",
+  "today": "Today",
+  "yesterday": "Yesterday",
+  "transaction": "Transaction",
+  "noTransactions": "No transactions found",
+  "adjustDateRange": "Try adjusting your date range",
+  "startDate": "Start Date",
+  "endDate": "End Date",
+  "filter": "Filter",
+  "statement": "Statement",
+  "sending": "Sending...",
+  "invalidRange": "Invalid Range",
+  "invalidRangeSub": "Start date must be before end date",
+  "statementSent": "Statement Sent",
+  "statementSentSub": "Your statement has been sent to your email.",
+  "failed": "Failed",
+  "statementFailed": "Could not send statement. Please try again.",
+  "error": "Error",
+  "somethingWrong": "Something went wrong. Please try again."
+}
