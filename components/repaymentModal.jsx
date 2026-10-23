@@ -49,6 +49,12 @@ function DetailRow({ label, value, valueStyle, colors }) {
   );
 }
 
+// An api/ result failed if the request failed or the body says success: false.
+// Returns the backend's message for it ('' when there is none).
+const isFailed = (response) => !response?.ok || response?.data?.success === false;
+const failureText = (response) =>
+  response?.message ?? response?.data?.responseMessage ?? response?.data?.message ?? '';
+
 // ─── Full repayment quote ─────────────────────────────────────────────────────
 // Shows the backend's liquidation quote as-is: every figure is a field of the
 // response (amountDueNow, outstandingPrincipal, settlementInterest,
@@ -72,7 +78,9 @@ function FullRepaymentQuote({ query, quote, insufficientBalance, colors, t }) {
         className="mb-6 rounded-2xl p-4"
         style={{ backgroundColor: colors.dangerSoft, borderWidth: 1, borderColor: colors.line }}>
         <Text style={{ fontSize: 13, color: colors.danger }}>
-          {trimMessage(query.error?.message) || t('components.repayment.quoteError')}
+          {query.error?.message
+            ? trimMessage(query.error.message)
+            : t('components.repayment.quoteError')}
         </Text>
         <TouchableOpacity onPress={() => query.refetch()} className="mt-2 self-start">
           <Text style={{ fontSize: 13, fontWeight: '700', color: colors.primary }}>
@@ -156,7 +164,7 @@ function FullRepaymentQuote({ query, quote, insufficientBalance, colors, t }) {
 // full navigation round-trip / refetch.
 
 export default function RepaymentModal({ visible, onClose, item, statusConfig, onSuccess }) {
-  const { colors, shadows, isDark } = useTheme();
+  const { colors, shadows } = useTheme();
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   // Android: the modal's window isn't resized for the keyboard, so the sheet
@@ -181,10 +189,15 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
     queryKey: ['loanFullRepaymentQuote', loanId],
     queryFn: async () => {
       const response = await getFullRepaymentQuote(loanId);
-      if (!response?.ok) throw new Error(response?.message);
-      return response?.data?.responseBody ?? response?.data?.data ?? null;
+      if (isFailed(response)) throw new Error(failureText(response));
+      const body = response?.data?.responseBody ?? response?.data?.data;
+      // Without the total there is nothing to show or pay: treat it as a failure.
+      if (body?.totalSettlementAmount == null) throw new Error('');
+      return body;
     },
-    enabled: Boolean(visible && isFull && loanId != null),
+    // Not while paying or showing the result: after a Full repayment the loan
+    // is Completed, and re-quoting it would only fetch an error.
+    enabled: Boolean(visible && isFull && loanId != null && !isSubmitting && !resultModalVisible),
     staleTime: 0,
     gcTime: 0,
     retry: false,
@@ -244,7 +257,7 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
 
     setIsSubmitting(false);
 
-    if (response?.ok) {
+    if (!isFailed(response)) {
       setTransactionResult({
         success: true,
         message: isFull
@@ -275,7 +288,9 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
     } else {
       setTransactionResult({
         success: false,
-        message: trimMessage(response?.message) || t('components.repayment.failureMessage'),
+        message: failureText(response)
+          ? trimMessage(failureText(response))
+          : t('components.repayment.failureMessage'),
         option: repaymentOption,
         amount: paidAmount,
       });
@@ -531,7 +546,11 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
                 />
                 <DetailRow
                   label={t('components.repayment.optionLabel')}
-                  value={transactionResult?.option}
+                  value={
+                    transactionResult?.option === 'Full'
+                      ? t('components.repayment.full')
+                      : t('components.repayment.partial')
+                  }
                   colors={colors}
                 />
                 <DetailRow
@@ -539,11 +558,13 @@ export default function RepaymentModal({ visible, onClose, item, statusConfig, o
                   value={formatAmount(transactionResult?.amount)}
                   colors={colors}
                 />
-                <DetailRow
-                  label={t('components.repayment.reference')}
-                  value={transactionResult?.reference}
-                  colors={colors}
-                />
+                {transactionResult?.reference ? (
+                  <DetailRow
+                    label={t('components.repayment.reference')}
+                    value={transactionResult.reference}
+                    colors={colors}
+                  />
+                ) : null}
               </View>
             )}
 
