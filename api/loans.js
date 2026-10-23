@@ -45,6 +45,20 @@ export async function getMyLoans(params) {
   }
 }
 
+// What a Full repayment will debit right now (the liquidation figure: amount
+// due + outstanding principal + one cycle of interest). Read-only; every
+// number comes from the backend, the app does no arithmetic on it.
+export async function getFullRepaymentQuote(loanId) {
+  try {
+    const url = routes?.loanFullRepaymentQuote.replace('{loanId}', encodeURIComponent(loanId));
+    const response = await axiosCbaInstance.get(url);
+    return { ok: true, data: response.data };
+  } catch (error) {
+    console.log(JSON.stringify(error, null, 2));
+    return { ok: false, message: extractApiErrorMessage(error) };
+  }
+}
+
 export async function repayLoan(payload) {
   try {
     const response = await axiosCbaInstance.post(routes?.loanRepayment, payload);

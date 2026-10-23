@@ -70,6 +70,17 @@
     "reference": "Reference",
     "done": "Done",
     "tryAgain": "Try Again",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "fullSuccessMessage": "Your loan has been fully repaid.",
+    "payAmount": "Pay {{amount}}",
+    "quoteLoading": "Getting your payoff amount...",
+    "quoteError": "We couldn't get your payoff amount. Please try again.",
+    "retry": "Retry",
+    "amountDueNow": "Due now",
+    "outstandingPrincipal": "Outstanding principal",
+    "settlementInterest": "Interest (next cycle)",
+    "totalToPay": "Total to pay",
+    "interestSaved": "You save {{amount}} in interest",
+    "insufficientBalance": "Your loan account has {{balance}}. Fund it up to {{amount}} to repay in full."
   }
 }

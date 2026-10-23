@@ -117,6 +117,8 @@ export const routes = {
   loanPreview: '/api/v1/loan/loan-preview',
   myLoans: '/api/v1/loan/my-loans',
   loanRepayment: '/api/v1/loan/loan-repayment',
+  // Full repayment (liquidation) quote: GET, read-only — `{loanId}` is filled in by api/loans.
+  loanFullRepaymentQuote: '/api/v1/loan/{loanId}/full-repayment-quote',
 
   // Internal Transfer
   validateAccountNumber: '/api/v1/internal-transfer/validate-account-number',

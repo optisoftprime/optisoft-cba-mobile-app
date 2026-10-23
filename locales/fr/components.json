@@ -70,6 +70,17 @@
     "reference": "Référence",
     "done": "Terminé",
     "tryAgain": "Réessayer",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "fullSuccessMessage": "Votre prêt a été entièrement remboursé.",
+    "payAmount": "Payer {{amount}}",
+    "quoteLoading": "Calcul du montant de remboursement...",
+    "quoteError": "Impossible d'obtenir le montant de remboursement. Veuillez réessayer.",
+    "retry": "Réessayer",
+    "amountDueNow": "Dû maintenant",
+    "outstandingPrincipal": "Principal restant",
+    "settlementInterest": "Intérêts (prochaine échéance)",
+    "totalToPay": "Total à payer",
+    "interestSaved": "Vous économisez {{amount}} d'intérêts",
+    "insufficientBalance": "Votre compte de prêt contient {{balance}}. Approvisionnez-le jusqu’à {{amount}} pour rembourser en totalité."
   }
 }
